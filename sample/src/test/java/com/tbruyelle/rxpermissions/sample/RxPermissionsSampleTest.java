@@ -35,7 +35,7 @@ public class RxPermissionsSampleTest {
     @Test
     @TargetApi(Build.VERSION_CODES.M)
     public void test_permission_denied_dont_ask_again() throws Exception {
-        // mocks
+        //permissions mocks
         final String permissionString = Manifest.permission.READ_PHONE_STATE;
         final boolean granted = false;
         final boolean shouldShowRequestPermissionRationale = false;

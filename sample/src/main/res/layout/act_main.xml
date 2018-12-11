@@ -11,6 +11,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
     <Button
         android:id="@+id/enableCamera"
@@ -20,4 +24,15 @@
         android:layout_marginTop="16dp"
         android:text="@string/enable_camera"
         />
+
+    <Button
+        android:id="@+id/enableCamera2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:text="@string/enable_camera"
+
+        />
+    </LinearLayout>
 </merge>
