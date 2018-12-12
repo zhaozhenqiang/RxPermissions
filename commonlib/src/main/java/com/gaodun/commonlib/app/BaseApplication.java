@@ -1,6 +1,7 @@
 package com.gaodun.commonlib.app;
 
 import android.app.Application;
+import android.content.Context;
 
 /**
  * Function:BaseApplication
@@ -10,7 +11,7 @@ import android.app.Application;
  */
 public class BaseApplication extends Application {
 
-    private static BaseApplication mInstance = null;
+    private static Context mInstance = null;
 
     @Override
     public void onCreate() {
@@ -18,7 +19,7 @@ public class BaseApplication extends Application {
         mInstance = this;
     }
 
-    public static BaseApplication getInstance() {
+    public static Context getInstance() {
         return mInstance;
     }
 

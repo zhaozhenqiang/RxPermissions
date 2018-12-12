@@ -11,6 +11,7 @@ import android.view.View;
 import com.gaodun.commonlib.permission.OnPermissionAllCallback;
 import com.gaodun.commonlib.permission.OnPermissionDefaultCallback;
 import com.gaodun.commonlib.permission.PermissionManager;
+import com.gaodun.commonlib.util.ToastUtil;
 
 import java.io.IOException;
 
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_main);
+        ToastUtil.getInstance().show("lailailailai");
         surfaceView = findViewById(R.id.surfaceView);
         findViewById(R.id.enableCamera).setOnClickListener(this);
         findViewById(R.id.enableCamera2).setOnClickListener(this);

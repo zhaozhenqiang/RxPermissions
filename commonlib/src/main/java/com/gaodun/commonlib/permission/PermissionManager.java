@@ -137,8 +137,8 @@ public class PermissionManager {
      */
     public void showNoPermission(String name) {
         String msg = String.format(mContext.getString(R.string.permission_denied), name);
-        //ToastUtil.getInstance().show(msg);
-        Toast.makeText(mContext,msg,Toast.LENGTH_LONG).show();
+        ToastUtil.getInstance().show(msg);
+        //Toast.makeText(mContext,msg,Toast.LENGTH_LONG).show();
     }
 
     /**
