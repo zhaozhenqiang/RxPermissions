@@ -7,7 +7,7 @@ import android.widget.Toast;
  * Created by liujing on 2018/12/11.
  */
 
-public class OnPermissionCallbackIm implements OnPermissionCallback{
+public class OnPermissionCallbackIm implements OnPermissionAllCallback {
 
     private Context mContext;
 

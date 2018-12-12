@@ -13,6 +13,7 @@
     <uses-permission android:name="android.permission.CAMERA"/>
 
     <application
+        android:name="com.gaodun.commonlib.app.BaseApplication"
         android:allowBackup="true"
         android:fullBackupContent="false"
         android:icon="@mipmap/ic_launcher"

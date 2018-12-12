@@ -3,7 +3,6 @@ package com.gaodun.commonlib.permission;
 import android.os.Build;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
-import android.widget.Toast;
 
 import com.tbruyelle.rxpermissions2.Permission;
 import com.tbruyelle.rxpermissions2.RxPermissions;
@@ -25,7 +24,7 @@ public class PermissionUtils {
      * @param permissions        依次传入请求的权限
      */
     public static void permissions(FragmentActivity activity,
-                                   final OnPermissionCallback permissionCallback,
+                                   final OnPermissionAllCallback permissionCallback,
                                    final String... permissions) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (activity != null && permissionCallback != null) {
@@ -58,7 +57,7 @@ public class PermissionUtils {
      * @param permissions        依次传入请求的权限
      */
     public static void permissions(Fragment fragment,
-                                   final OnPermissionCallback permissionCallback,
+                                   final OnPermissionAllCallback permissionCallback,
                                    final String... permissions) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (fragment != null && permissionCallback != null) {

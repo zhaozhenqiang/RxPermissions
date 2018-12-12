@@ -64,7 +64,7 @@ public class PermissionUtil {
      * @param permissions        依次传入请求的权限
      */
     @TargetApi(Build.VERSION_CODES.M)
-    public void checkPermissionsByEach(final OnPermissionSuccessCallback permissionCallback,
+    public void checkPermissionsByEach(final OnPermissionDefaultCallback permissionCallback,
                                        final String... permissions) throws IllegalArgumentException {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
             throw new IllegalArgumentException("permissionUtil eachCall should version>=23");
@@ -80,14 +80,14 @@ public class PermissionUtil {
      * @param permissions        依次传入请求的权限
      */
     @TargetApi(Build.VERSION_CODES.M)
-    public void checkPermissionsByOnce(final OnPermissionSuccessCallback permissionCallback,
+    public void checkPermissionsByOnce(final OnPermissionDefaultCallback permissionCallback,
                                        final String... permissions) throws IllegalArgumentException {
         initIllegalCheck(permissionCallback, permissions);
         Observable<Permission> observable = mRxPermissions.requestEachCombined(permissions);
         subscribe(observable,permissionCallback);
     }
 
-    void subscribe(Observable<Permission> observable, final OnPermissionSuccessCallback permissionCallback){
+    void subscribe(Observable<Permission> observable, final OnPermissionDefaultCallback permissionCallback){
         observable.subscribe(new Consumer<Permission>() {
             @Override
             public void accept(Permission permission) throws Exception {
@@ -121,7 +121,7 @@ public class PermissionUtil {
     }
 
     // 非法校验
-    public void initIllegalCheck(final OnPermissionSuccessCallback permissionCallback,
+    public void initIllegalCheck(final OnPermissionDefaultCallback permissionCallback,
                                  final String... permissions) {
         if (mRxPermissions == null) {
             throw new IllegalArgumentException("permissionUtil need first call instance() and with()");

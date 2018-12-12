@@ -66,7 +66,7 @@ public class PermissionUtilCopy {
      * @param permissions        依次传入请求的权限
      */
     @TargetApi(Build.VERSION_CODES.M)
-    public void checkPermissions(final OnPermissionSuccessCallback permissionCallback,
+    public void checkPermissions(final OnPermissionDefaultCallback permissionCallback,
                                          final String... permissions) throws IllegalArgumentException{
         if (mRxPermissions == null) {
             throw new IllegalArgumentException("permissionUtil need first call instance() and with()");
